@@ -1,0 +1,25 @@
+﻿ID;Block;Position;Einheit;Wert;Formel;Kapitel;Hinweis
+S01;Bestandteile je Aufruf;Agentendatei (Systemprompt);Token;15000;Eingabe;10.2;Beispielwert. Messen Sie den Wert am eigenen Modell nach.
+S02;Bestandteile je Aufruf;Auszug aus dem Muss-Wissen;Token;6000;Eingabe;10.2;
+S03;Bestandteile je Aufruf;Beleg etwa XML-Teil einer E-Rechnung;Token;2000;Eingabe;10.2;
+S04;Bestandteile je Aufruf;bisheriger Verlauf des Belegs;Token;2000;Eingabe;10.2;
+S05;Bestandteile je Aufruf;Eingabe je Aufruf;Token;25000;S01 + S02 + S03 + S04;10.2;
+S06;Bestandteile je Aufruf;Ausgabe je Aufruf;Token;750;Eingabe;10.2;
+S07;Menge;Aufrufe je Beleg;Anzahl;4;Eingabe;10.2;planen. Wissen abrufen. prüfen. Vorschlag ausgeben
+S08;Menge;Belege je Monat;Anzahl;200;Eingabe;10.2, 10.7;wie A01 der Rechenvorlage
+S09;Menge;Eingabe-Token je Monat;Token;20000000;S05 × S07 × S08;10.2;
+S10;Menge;Ausgabe-Token je Monat;Token;600000;S06 × S07 × S08;10.2;
+S11;Mittleres Modell;Preis je 1 Mio. Eingabe-Token;US-$;2;Eingabe;10.1, 10.2;Beispielpreis Stand Oktober 2026. Preisliste und Stand notieren
+S12;Mittleres Modell;Preis je 1 Mio. Ausgabe-Token;US-$;10;Eingabe;10.1, 10.2;Beispielpreis Stand Oktober 2026
+S13;Mittleres Modell;Kosten je Monat ohne Zwischenspeicher;US-$;46;S09 / 1000000 × S11 + S10 / 1000000 × S12;10.2;
+S14;Zwischenspeicher;Anteil der Eingabe aus dem Zwischenspeicher;%;80;Eingabe;10.2;vereinfachte Annahme
+S15;Zwischenspeicher;Lesefaktor für zwischengespeicherte Eingabe;Faktor;0,1;Eingabe;10.2, 24.3;häufig ein Zehntel des Eingabepreises
+S16;Mittleres Modell;Kosten je Monat mit Zwischenspeicher;US-$;17;S09 / 1000000 × S11 × ((1 − S14 / 100) + S14 / 100 × S15) + S10 / 1000000 × S12;10.2;ungerundet 17,20. Ohne Aufschlag für das Schreiben in den Speicher
+S17;Spitzenmodell;Preis je 1 Mio. Eingabe-Token;US-$;10;Eingabe;10.1, 10.2;Beispielpreis Stand Oktober 2026
+S18;Spitzenmodell;Preis je 1 Mio. Ausgabe-Token;US-$;50;Eingabe;10.1, 10.2;Beispielpreis Stand Oktober 2026
+S19;Spitzenmodell;Kosten je Monat ohne Zwischenspeicher;US-$;230;S09 / 1000000 × S17 + S10 / 1000000 × S18;10.2;
+S20;Spitzenmodell;Kosten je Monat mit Zwischenspeicher;US-$;86;S09 / 1000000 × S17 × ((1 − S14 / 100) + S14 / 100 × S15) + S10 / 1000000 × S18;10.2;ohne Aufschlag für das Schreiben in den Speicher
+S21;Umrechnung;Wechselkurs;€ je US-$;[aus Quelle offen];Eingabe;10.2;Kurs und Stichtag notieren
+S22;Umrechnung;Kosten je Monat mit Zwischenspeicher in Euro;€;[aus Quelle offen];S16 × S21;10.2;für das Spitzenmodell S20 × S21. Ergebnis plus Reserve in L02 der Rechenvorlage
+S23;Abgleich;Tokenlimit je Monat;Token;25000000;wie B06 der Rechenvorlage;10.4;deckt S09 + S10 (20600000) mit rund 20 % Puffer
+S24;Faustregel;Token je Wort für deutsche Fließtexte;Faktor;1,7;Eingabe;10.2;für Anweisungen mit Tabellen und Zahlen etwa 2. Messen Sie den Wert am eigenen Modell nach.

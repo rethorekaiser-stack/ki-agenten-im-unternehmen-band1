@@ -1,0 +1,4 @@
+﻿Nr.;Datum;Beleg (Kennung, keine Personendaten);Vorschlag des Agenten;Korrektur durch den Menschen;Fehlerklasse (kritisch / wesentlich / formal);Grund der Korrektur;Folge (melden + Rückstufung / Regel ergänzen / Anweisung präzisieren);erledigt am;korrigiert von
+1;[DATUM];[BELEG];[aus Quelle offen];[aus Quelle offen];wesentlich;Frachtrechnung eines Spediteurs mit Fracht und Maut auf einer Rechnung, fehlende Regel (Praxisbeispiel 5.2, Sanitärgroßhandel);Steuerberater legt Kontierung fest, kommt als Muss-Wissen hinzu;[DATUM];[NAME BUCHHALTER]
+2;[DATUM];[BELEG];Freigabestufe 1 vorgeschlagen;Freigabestufe 2 erforderlich;kritisch;zu niedrige Freigabestufe (Beispiel der Fehlerklasse aus 5.2);sofort melden, Rückstufung, Ursache klären;[DATUM];[NAME BUCHHALTER]
+3;[DATUM];[BELEG];Begründung ohne Quelle;Begründung ergänzt;formal;Begründung unvollständig (Beispiel der Fehlerklasse aus 5.2);sammeln, Anweisung präzisieren;[DATUM];[NAME BUCHHALTER]

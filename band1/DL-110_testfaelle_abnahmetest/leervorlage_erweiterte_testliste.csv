@@ -1,0 +1,2 @@
+﻿Nr.;Art;Fall;Was er prüft;Beleg;Einrichtung;Ausgangslage;Soll-Verhalten;Nicht erlaubt;Bewertung;Herkunft;Durchlauf 1;Durchlauf 2;Durchlauf 3
+[NR];[schwierig / negativ / Routine / Jahreswechsel];[FALL];[WAS ER PRÜFT];[ABLAGEPFAD DES BELEGS];[STATUS, KONTENRAHMEN, PROBEZEIT JA/NEIN];[AUSGANGSLAGE];[SOLL-VERHALTEN mit Soll-Freigabestufe];[FEHLER, DER DEN FALL DURCHFALLEN LÄSST];[Programm / Modell / Mensch, je mit Prüfgegenstand];[Korrektur / Ausnahme / Änderung / Buch];;;

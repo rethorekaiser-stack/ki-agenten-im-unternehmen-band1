@@ -1,0 +1,7 @@
+﻿Nr.;Maßnahme;Kapitel und Baustein;Was geändert wird;Messgröße;vorher;nachher;Regressionstest (B-17.4) bestanden;Bemerkung
+M-1;Modellstaffelung;24.2 und B-13.1;;;;;[ ];
+M-2;Zwischenspeicher;24.3 und B-24.3;;;;;[ ];
+M-3;Parallele Teilläufe;24.4 und B-19.4;;;;;[ ];
+M-4;Abrufe bündeln;24.5 und B-24.5;;;;;[ ];
+M-5;Zwischenstände;24.6 und B-24.6;;;;;[ ];
+M-6;Laufbeginn und Freigabeablauf;24.1;;;;;[ ];

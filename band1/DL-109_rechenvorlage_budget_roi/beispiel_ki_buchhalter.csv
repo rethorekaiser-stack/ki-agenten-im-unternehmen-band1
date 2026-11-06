@@ -1,0 +1,47 @@
+﻿ID;Block;Position;Einheit;Wert;Formel;Kapitel;Hinweis
+A01;Annahmen;Belege je Monat;Anzahl;200;Eingabe;10.7;Beispielwert, kein Messwert
+A02;Annahmen;Stundensatz Buchhaltung einschließlich Nebenkosten;€/h;50;Eingabe;10.7;Beispielwert
+A03;Annahmen;Wochen je Monat;Faktor;4,33;Eingabe;10.7;
+Z01;Schritt 1 Zeit;manuelle Kontierung vorher je Woche;h;12;Eingabe;10.7;
+Z02;Schritt 1 Zeit;manuell vorher je Monat;h;52,0;Z01 × A03;10.7;ungerundet 51,96
+Z03;Schritt 1 Zeit;manuell vorher je Monat;€;2600;Z02 × A02;10.7;ungerundet 2598
+Z04;Schritt 1 Zeit;Prüfung der Vorschläge je Woche;h;3;Eingabe;10.7;wichtigste Annahme der Rechnung
+Z05;Schritt 1 Zeit;Bearbeitung der Ausnahmen je Woche;h;2;Eingabe;10.7;
+Z06;Schritt 1 Zeit;mit Agent je Monat;h;21,7;(Z04 + Z05) × A03;10.7;ungerundet 21,65
+Z07;Schritt 1 Zeit;mit Agent je Monat;€;1085;Z06 × A02;10.7;wie im Buch mit den angezeigten Stunden 21,7 h. Ungerundet 1082,50
+Z08;Schritt 1 Zeit;eingespart je Monat;h;30,3;Z02 − Z06;10.7;
+Z09;Schritt 1 Zeit;eingespart je Monat;€;1515;Z03 − Z07;10.7;wie im Buch (30,3 h). Ungerundet 30,31 h = 1515,50
+L01;Schritt 2 laufend;Lizenzen für zwei Nutzer;€/Monat;50;Eingabe;10.7;Preisstand notieren
+L02;Schritt 2 laufend;Verbrauch mit Reserve;€/Monat;80;Eingabe;10.7, 10.2;Schätzung aus dem Token- und Kostenschätzer (S16 bzw. S22) plus Reserve
+L03;Schritt 2 laufend;Pflege: Stichprobe, Beurteilung, Wissen;h/Monat;4;Eingabe;10.7;
+L04;Schritt 2 laufend;Pflege;€/Monat;200;L03 × A02;10.7;
+L05;Schritt 2 laufend;laufend gesamt;€/Monat;330;L01 + L02 + L04;10.7;Rahmen dieses Buches (Kapitel 10.7): 150 bis 400 € je Monat
+E01;Schritt 3 einmalig;Aufbau: Stellenprofil, Agentendatei, Wissen, Abnahmetest;h;40;Eingabe;10.7;
+E02;Schritt 3 einmalig;Aufbau;€;2000;E01 × A02;10.7;
+E03;Schritt 3 einmalig;Prüfung durch Ihren Steuerberater;€;1000;Eingabe;10.7;
+E04;Schritt 3 einmalig;Mehraufwand Probezeit je Woche;h;6;Eingabe;10.7;
+E05;Schritt 3 einmalig;Dauer der Probezeit;Wochen;4;Eingabe;10.7;
+E06;Schritt 3 einmalig;Mehraufwand Probezeit;€;1200;E04 × E05 × A02;10.7;
+E07;Schritt 3 einmalig;einmalig gesamt;€;4200;E02 + E03 + E06;10.7;
+N01;Schritt 4 Ergebnis;Netto-Nutzen je Monat;€/Monat;1185;Z09 − L05;10.7;wie im Buch
+N02;Schritt 4 Ergebnis;Amortisation;Monate;3,5;E07 / N01;10.7;Rahmen dieses Buches (Kapitel 10.7): 2 bis 4 Monate
+N03;Schritt 4 Ergebnis;Ergebnis im ersten Jahr;€;10020;12 × N01 − E07;10.7;wie im Buch
+N04;Schritt 4 Ergebnis;Kosten je Beleg vorher;€/Beleg;13,00;Z03 / A01;10.7;
+N05;Schritt 4 Ergebnis;Kosten je Beleg nachher;€/Beleg;7,08;(Z07 + L05) / A01;10.7;rund. (1085 € + 330 €) / 200 = 7,075
+V01;Variante Prüfzeit;Prüfung der Vorschläge je Woche;h;6;Eingabe;10.7, Anhang B.6;doppelte Prüfzeit. Variante immer mitrechnen. Zeit mit Agent dann (6 h + 2 h) × 4,33 = 34,6 h oder 1730 €
+V02;Variante Prüfzeit;eingespart je Monat;h;17,4;Z02 − V06;10.7;wie im Buch 52,0 h − 34,6 h. Ungerundet 17,32
+V03;Variante Prüfzeit;eingespart je Monat;€;870;Z03 − V07;10.7;wie im Buch 2600 € − 1730 € (17,4 h). Ungerundet 17,32 h = 866
+V04;Variante Prüfzeit;Netto-Nutzen je Monat;€/Monat;540;V03 − L05;10.7;wie im Buch. Der Agent lohnt sich noch aber nur halb so gut
+V05;Variante Prüfzeit;Amortisation;Monate;7,8;E07 / V04;10.7;
+V06;Variante Prüfzeit;mit Agent je Monat;h;34,6;(V01 + Z05) × A03;10.7;wie im Buch (6 h + 2 h) × 4,33. Ungerundet 34,64
+V07;Variante Prüfzeit;mit Agent je Monat;€;1730;V06 × A02;10.7;wie im Buch mit den angezeigten Stunden 34,6 h. Ungerundet 1732
+O01;nicht in der Rechnung;Nutzen durch weniger Fehler und vollständiges Protokoll;€;[aus Quelle offen];nicht in Euro gefasst;10.7;neben das Ergebnis schreiben
+O02;nicht in der Rechnung;Kosten höherer Ausbaustufe: einmaliges DATEV-Onboarding;€;1500;Eingabe;10.7, 2.5;zuzüglich Umsatzsteuer laut Preisliste
+O03;nicht in der Rechnung;Wirkung auf die Menschen;Text;[aus Quelle offen];kein Rechenwert;10.7;eingesparte Stunden sind nur Nutzen wenn sie für andere Aufgaben genutzt werden
+B01;Budget;Budget je Monat;€/Monat;[EIGENER WERT];Eingabe;10.4;in Euro festlegen. In der Agentendatei als [BETRAG] in B-10.4. Schätzung aus 10.2 plus Puffer. Umfasst alle laufenden Kosten des Agenten. Beispielwert: 120 €/Monat (Praxisbeispiel 10.4)
+B02;Budget;Kostenstelle;Text;Finanzen;Eingabe;10.4;
+B03;Budget;Warnschwelle 1: Warnung an den Vorgesetzten;%;70;Eingabe;10.4;B-10.4
+B04;Budget;Warnschwelle 2: nur noch ausdrücklich beauftragte Läufe;%;90;Eingabe;10.4;B-10.4
+B05;Budget;Warnschwelle 3: Stopp und der Buchhalter übernimmt;%;100;Eingabe;10.4;B-10.4
+B06;Budget;Tokenlimit je Monat;Token;25000000;(S09 + S10) plus rund 20 % Puffer gerundet;10.4;Buchbeispiel: Schätzung rund 20,6 Mio. Token plus Puffer. Warnschwellen bei 17,5 Mio. (70 %) und 22,5 Mio. (90 %) und 25 Mio. Token (100 %). Nach der ersten Woche der Probezeit durch Messwerte ersetzen
+B07;Budget;Wer darf die Ausgabengrenze erhöhen;Text;[aus Quelle offen];Eingabe;10.5;im Vertrag festlegen (DL-125)

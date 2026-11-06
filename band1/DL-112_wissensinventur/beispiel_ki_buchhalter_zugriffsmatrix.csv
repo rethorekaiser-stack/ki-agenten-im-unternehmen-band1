@@ -1,0 +1,10 @@
+﻿Wissensart;Muss/Kann/Vorgang;Vertraulichkeit;Zugriff;Änderung;Aufbewahrung;Verantwortung;Server/Ablage
+Muss-Wissen Finanzen;Muss;intern, nur Abteilung;KI-Buchhalter (lesen, Änderungen nur vorschlagen), menschliche Buchhalter;nur nach menschlicher Freigabe, versioniert;10 Jahre als Arbeitsanweisung. Beispiel. Stimmen Sie die Einordnung für Ihr Unternehmen mit Ihrem Steuerberater ab.;Leitung Rechnungswesen;Wissensserver Finanzen
+Kann-Wissen Unternehmen;Kann;intern;alle Agenten, nur lesend;zentral;nach Bedarf;Compliance bzw. IT;Unternehmensserver
+Buchungsbelege;Vorgang;sensibel;KI-Buchhalter nur für den Lauf: Belegeingang und Ablage Buchhaltung lesen, Vorschläge in einen eigenen Ordner schreiben (Kapitel 14.6);keine;8 Jahre (§ 147 Abs. 3 AO, seit 01.01.2025);Buchhaltung;Belegablage
+Protokolle der Läufe;Vorgang;intern, unveränderlich;KI-Buchhalter nur anhängen (nicht ändern, nicht löschen), Vorgesetzte, Prüfer lesen (Kapitel 12.1 und 14.6);keine;10 Jahre als Teil der Verfahrensdokumentation. Beispiel. Stimmen Sie die Einordnung für Ihr Unternehmen mit Ihrem Steuerberater ab.;Compliance;[aus Quelle offen]
+Summarische Lohnbuchungsliste;Vorgang;sensibel;KI-Buchhalter nur Summen je Konto für die Lohnbuchung, nur für den Lauf;keine;[aus Quelle offen];[VERANTWORTLICH LOHN];[aus Quelle offen]
+Lohn- und Personaldaten einzelner Beschäftigter;–;sensibel (Art. 9 DSGVO);kein Zugriff des KI-Buchhalters;–;[aus Quelle offen];[aus Quelle offen];nicht angebunden
+Kontoauszüge und Kontoumsätze;Vorgang;sensibel;KI-Buchhalter nur lesend, nur zum Abgleich mit offenen Posten, nur für den Lauf (B-03.1 Nr. 7);keine;[aus Quelle offen];Buchhaltung;TU: vom Programm nur lesend abgerufen und übergeben (Kapitel 2.5)
+Bankzugänge;–;sensibel;kein Zugriff des KI-Buchhalters, kein Bankzugang;–;–;[aus Quelle offen];nicht angebunden
+Muss-Wissen anderer Abteilungen;Muss (fremd);nur jeweilige Abteilung;kein Zugriff des KI-Buchhalters;–;–;jeweilige Abteilung;Server der jeweiligen Abteilung

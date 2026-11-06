@@ -1,0 +1,12 @@
+﻿Nr.;Eingabe;Tätigkeit;Ergebnis;Prüfkriterium;Wer;Baustein
+1;E-Rechnung im Eingangsordner;Beleg übernehmen, Belegart und Belegdatum bestimmen;Belegart, Belegdatum;Vorgangsart freigegeben?;Agent;B-03.1
+2;Beleg mit Belegdatum;prüfen, ob der Beleg schon erfasst ist;„neu“ oder Dublette;keine Dublette;Agent;B-03.2
+3;Belegdatum;Muss-Wissen gültig zum Belegdatum abrufen;Kontenrahmen, Richtlinie, Steuersätze, Wertgrenzen;Einrichtungsprotokoll bestätigt, Kontenrahmen-Fassung vorhanden;Agent;B-09.4
+4;Beleg, bei E-Rechnungen der XML-Teil;Pflichtangaben prüfen;„vollständig“ oder Liste fehlender Angaben;Pflichtangaben vollständig;Agent;B-01.3, B-D2
+5;geprüfter Beleg, Muss-Wissen;Konten und Steuer bestimmen, Rechenprobe;Buchungssatz;netto plus Steuer gleich brutto, Soll gleich Haben;Agent;B-D1, B-D2
+6;Buchungssatz, Rechnungsbetrag (brutto);Freigabestufe und Summengrenze bestimmen;Freigabestufe 1, 2 oder 3;Freigabestufe nach Rechnungsbetrag (brutto);Agent;B-08.2
+7;Buchungssatz, Freigabestufe;Vorschlag im Ausgabeformat übergeben;Vorschlag mit Begründung;alle Felder gefüllt;Agent;B-13.3
+8;Vorschlag;freigeben oder ändern;freigegebene Buchung;Name und Zeitpunkt im Protokoll;Mensch;B-08.2
+9;freigegebene Buchung;festschreiben und an den Steuerberater übergeben;festgeschriebene Buchung;Festschreibung durch Menschen;Mensch;B-08.1, B-14.7
+10;fällige Rechnung;Rechnung bezahlen;Zahlung;Zahlung nach Ihrer Zahlungsfreigabe;Mensch;B-08.1
+11;alle Schritte;jeden Schritt protokollieren;Protokolleintrag;lückenloses Protokoll;Agent;B-16.3

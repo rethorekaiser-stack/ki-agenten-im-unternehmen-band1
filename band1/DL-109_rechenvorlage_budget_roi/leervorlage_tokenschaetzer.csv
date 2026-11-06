@@ -1,0 +1,25 @@
+﻿ID;Block;Position;Einheit;Wert;Formel;Kapitel;Hinweis
+S01;Bestandteile je Aufruf;Agentendatei (Systemprompt);Token;;Eingabe;10.2;Wörter × S24 oder gemessen
+S02;Bestandteile je Aufruf;Auszug aus dem Muss-Wissen;Token;;Eingabe;10.2;
+S03;Bestandteile je Aufruf;Beleg;Token;;Eingabe;10.2;
+S04;Bestandteile je Aufruf;bisheriger Verlauf des Belegs;Token;;Eingabe;10.2;
+S05;Bestandteile je Aufruf;Eingabe je Aufruf;Token;;S01 + S02 + S03 + S04;10.2;
+S06;Bestandteile je Aufruf;Ausgabe je Aufruf;Token;;Eingabe;10.2;
+S07;Menge;Aufrufe je Beleg;Anzahl;;Eingabe;10.2;
+S08;Menge;Belege je Monat;Anzahl;;Eingabe;10.2, 10.7;
+S09;Menge;Eingabe-Token je Monat;Token;;S05 × S07 × S08;10.2;
+S10;Menge;Ausgabe-Token je Monat;Token;;S06 × S07 × S08;10.2;
+S11;Modell A;Preis je 1 Mio. Eingabe-Token;US-$;;Eingabe;10.1, 10.2;Preisliste und Stand notieren
+S12;Modell A;Preis je 1 Mio. Ausgabe-Token;US-$;;Eingabe;10.1, 10.2;
+S13;Modell A;Kosten je Monat ohne Zwischenspeicher;US-$;;S09 / 1000000 × S11 + S10 / 1000000 × S12;10.2;
+S14;Zwischenspeicher;Anteil der Eingabe aus dem Zwischenspeicher;%;;Eingabe;10.2;
+S15;Zwischenspeicher;Lesefaktor für zwischengespeicherte Eingabe;Faktor;;Eingabe;10.2, 24.3;laut Preisliste
+S16;Modell A;Kosten je Monat mit Zwischenspeicher;US-$;;S09 / 1000000 × S11 × ((1 − S14 / 100) + S14 / 100 × S15) + S10 / 1000000 × S12;10.2;ohne Schreibaufschlag
+S17;Modell B;Preis je 1 Mio. Eingabe-Token;US-$;;Eingabe;10.1, 10.2;Vergleichsmodell
+S18;Modell B;Preis je 1 Mio. Ausgabe-Token;US-$;;Eingabe;10.1, 10.2;
+S19;Modell B;Kosten je Monat ohne Zwischenspeicher;US-$;;S09 / 1000000 × S17 + S10 / 1000000 × S18;10.2;
+S20;Modell B;Kosten je Monat mit Zwischenspeicher;US-$;;S09 / 1000000 × S17 × ((1 − S14 / 100) + S14 / 100 × S15) + S10 / 1000000 × S18;10.2;
+S21;Umrechnung;Wechselkurs;€ je US-$;;Eingabe;10.2;Kurs und Stichtag notieren
+S22;Umrechnung;Kosten je Monat mit Zwischenspeicher in Euro;€;;S16 × S21;10.2;Ergebnis plus Reserve in L02 der Rechenvorlage
+S23;Abgleich;Tokenlimit je Monat;Token;;wie B06 der Rechenvorlage;10.4;muss S09 + S10 mit Puffer abdecken
+S24;Faustregel;Token je Wort;Faktor;;Eingabe;10.2;Buch: etwa 1,7 für Fließtext und etwa 2 für Anweisungen

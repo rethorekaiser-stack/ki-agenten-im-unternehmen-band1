@@ -1,0 +1,5 @@
+﻿Agent;Rolle;Version Agentendatei;Teilaufgabe;erlaubt;Übergabeweg;Bemerkung
+Agent für die vorbereitende Buchhaltung;Arbeitsagent;[VERSION];auslesen;ja;Übergabevermerk nach B-20.1;sammeln und auslesen aus Postfach und Ablage. Pflichtangaben nach Checkliste. Dubletten vorprüfen. Bestellungen und Wareneingänge zuordnen (Kapitel 19.3)
+KI-Buchhalter;Orchestrator;1.21;kontieren;ja;–;Kontierung. Freigabestufe. Begründung. Wird nie abgegeben (B-19.3)
+Agent für die vorbereitende Buchhaltung;Arbeitsagent;[VERSION];kontieren;nein;–;gehört nicht zu seiner Teilaufgabe (Kapitel 19.3)
+[PRÜFAGENT];Prüfagent;[VERSION];prüfen;nein;–;nur wenn in B-18.1 eine Prüfschleife eingetragen ist (B-19.5)

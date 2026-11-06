@@ -1,0 +1,39 @@
+# .gitignore für das Repository zur Buchreihe „KI-Agenten im Unternehmen“ (Band 1, Kapitel 14.6, Anhang B.7)
+# Stand 03.11.2026. Hält Geheimnisse und echte Daten aus dem Repository heraus.
+# Nicht eingecheckt wird alles, was einen Wert enthält. Die Namen der Geheimnisse stehen in .env.example.
+
+# Umgebungsdateien mit Werten (nur .env.example gehört ins Repository)
+.env
+.env.*
+!.env.example
+
+# Schlüssel- und Zertifikatsdateien
+*.key
+*.pem
+*.p12
+*.pfx
+*.crt
+*.cer
+*.der
+*.jks
+*.keystore
+id_rsa*
+id_ed25519*
+
+# Protokolle aus Läufen mit echten Daten
+*.log
+*.jsonl
+protokoll*/
+logs/
+
+# Echte Belege und Buchungsstapel (Beispiele liegen nur als Muster in den DL-Ordnern)
+belege/
+echte_belege/
+EXTF_*.csv
+*.pdf
+
+# Werkzeuge
+__pycache__/
+*.pyc
+.venv/
+venv/
